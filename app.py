@@ -64,7 +64,7 @@ with tab1:
         model = st.selectbox(
             'Please select the model to generate audio.',
             (
-                'epoch=5034-step=2388974.onnx',
+                'epoch=5261-step=2455712.onnx',
             ),
             label_visibility = "collapsed",    
         )
@@ -101,7 +101,7 @@ with tab2:
     words = st.text_input('Enter word(s) with spelling issue', 'گزارش مشکل واج یک کلمه')
     if st.button('report'):
             command = [
-                "/usr/bin/espeak-ng --path=./piper/espeak-ng-data",
+                "/usr/bin/espeak-ng",
                 "-v", "fa",
                 "-q", "--ipa",
                 words
@@ -117,7 +117,7 @@ with tab3:
     word = st.text_input('Check word(s) spelling in phoneme format', 'نمایش واج یک کلمه')
     if st.button('check'):
         command = [
-                "/usr/bin/espeak-ng --path=./piper/espeak-ng-data",
+                "/usr/bin/espeak-ng",
                 "-v", "fa",
                 "-q", "--ipa",
                 word
