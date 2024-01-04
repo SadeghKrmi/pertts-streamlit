@@ -1,0 +1,16 @@
+textarea {
+  direction: rtl;
+}
+
+input {
+  direction: rtl;
+}
+
+@font-face { 
+  font-family: "nazanin";
+  src: url('fonts/bnazanin.woff2') format('woff2');
+}
+
+body {
+    font-family: 'nazanin', sans-serif;
+}
