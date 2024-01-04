@@ -8,6 +8,11 @@ RUN apt-get update && apt-get install -y \
     software-properties-common \
     git \
     espeak-ng \
+    make \
+    autoconf \
+    automake \
+    libtool \
+    pkg-config \
     && apt-get clean \ 
     && rm -rf /var/lib/apt/lists/*
 
@@ -18,12 +23,18 @@ RUN curl -LO https://github.com/rhasspy/piper/releases/download/v1.2.0/piper_amd
     && rm -rf ./piper/espeak-ng-data \
     && rm -rf piper_amd64.tar.gz
 
-RUN curl -LO https://github.com/SadeghKrmi/espeak-ng/releases/download/v1.0.0/espeak-ng-data.tar.gz \
-    && mkdir espeak-ng-data && tar -xzvf espeak-ng-data.tar.gz -C espeak-ng-data \
-    && mv espeak-ng-data ./piper/ \
-    && rm -rf espeak-ng-data.tar.gz 
 
-RUN pip3 install -r requirements.txt
+RUN git clone https://github.com/SadeghKrmi/espeak-ng.git && \
+    cd ./espeak-ng && \
+    chmod +x ./autogen.sh && \
+    ./autogen.sh && \
+    ./configure --prefix=/usr && \
+    make && \
+    make install && \
+    cp -r espeak-ng-data /app/piper/
+
+RUN cd /app && \
+    pip3 install -r requirements.txt
 
 EXPOSE 8501
 
