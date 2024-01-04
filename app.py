@@ -24,7 +24,7 @@ st.sidebar.markdown(
 
 st.sidebar.header("Voice")
 st.sidebar.markdown(
-    "We are using an AI based TTS system, trained with Amir Soodbakhsh voice from [rokhpodcast](https://rokhpodcast.ir/), Special thanks to Amir :)"
+    "We are using an AI based TTS system, trained with Amir Sooakhsh voice from [rokhpodcast](https://rokhpodcast.ir/), Special thanks to Amir :)"
 )
 
 
@@ -75,7 +75,7 @@ with tab1:
             epoch = time()
             wav_filename = str(epoch).replace('.', '') + ".wav"
             wav_filepath = "./audio-out/" + wav_filename
-            gCommand = ['bash', '-c', 'echo "{txt}" | ./piper-bin/piper/piper --model ./model/{model} --output_file {wav_filepath} --sentence_silence 0.3'.format(txt=txt, model=model,wav_filepath=wav_filepath)]
+            gCommand = ['bash', '-c', 'echo "{txt}" | ./piper/piper --model ./model/{model} --output_file {wav_filepath} --sentence_silence 0.3'.format(txt=txt, model=model,wav_filepath=wav_filepath)]
 
             with st.spinner('Wait for it...'):
                 try:
@@ -91,7 +91,7 @@ with tab1:
                     print(f"Error executing the command for audio geneation: {e}")
                     rCommand = ['bash', '-c', 'rm -rf {wav_filepath}'.format(wav_filepath=wav_filepath) ]
                     process = subprocess.run(rCommand, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, check=True)
-                    st.write("Error generating the audio, please contact us at datacula.com")
+                    st.write("Error generating the audio, please contact us at support@datacula.com")
 
     
 
