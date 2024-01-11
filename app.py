@@ -18,9 +18,12 @@ st.set_page_config(
 
 
 # Sidebar
+st.sidebar.image('./img/datacula.png', width=32)
+
 st.sidebar.markdown(
     "Let's explore data science with [DataCula!](https://datacula.com)"
 )
+
 
 st.sidebar.header("Voice")
 st.sidebar.markdown(
@@ -30,7 +33,7 @@ st.sidebar.markdown(
 
 st.sidebar.header("Contact")
 st.sidebar.markdown(
-    "Reach us on [DataCula!](https://datacula.com)"
+    "support@datacula.com"
 )
 
 
@@ -39,14 +42,10 @@ st.title(":speech_balloon: Persian AI text-to-speech")
 We're very excited to release `DataCula perTTS`, which coverts text to speech in persian/farsi.
 """
 
-
-
-tab1, tab2, tab3 = st.tabs([
+tab1, tab2 = st.tabs([
     ":loudspeaker: Convert text",
-    ":ladybug: Report a mis-spelling",
     ":keyboard: Check a word",
 ])
-
 
 # Injecting the CSS
 local_css("style.css")
@@ -95,26 +94,9 @@ with tab1:
 
     
 
-       
 
 with tab2:
-    words = st.text_input('Enter word(s) with spelling issue', 'گزارش مشکل واج یک کلمه')
-    if st.button('report'):
-            command = [
-                "/usr/bin/espeak-ng",
-                "-v", "fa",
-                "-q", "--ipa",
-                words
-            ]
-            process = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-            stdout, stderr = process.communicate()
-            if process.returncode == 0:
-                stdout = stdout.decode('utf-8')
-                st.write(words, '\u2194', stdout)
-
-
-with tab3:
-    word = st.text_input('Check word(s) spelling in phoneme format', 'نمایش واج یک کلمه')
+    word = st.text_input('Check word(s) spelling in phoneme format', 'نمایش واج آرایی کلمه ها')
     if st.button('check'):
         command = [
                 "/usr/bin/espeak-ng",
@@ -127,3 +109,4 @@ with tab3:
         if process.returncode == 0:
             stdout = stdout.decode('utf-8')
             st.write(word, '\u2194', stdout)
+       
