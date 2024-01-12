@@ -1,7 +1,9 @@
 ## pertts (persian text-to-speech)
 This is implementation and web interface for pertts (persian text-to-speech)
 
-powered by https://github.com/rhasspy/piper
+powered by [piper](https://github.com/rhasspy/piper)
+
+live version of persian tts called [pertts](https://tts.datacula.com/)
 
 ![image](https://github.com/SadeghKrmi/pertts-streamlit/assets/5988663/9b8c751b-d5e7-42eb-9c7f-2516aed6baa6)
 with love from datacula.com
