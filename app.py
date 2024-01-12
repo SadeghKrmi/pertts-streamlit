@@ -31,6 +31,13 @@ st.sidebar.markdown(
 )
 
 
+
+st.sidebar.header("Repository")
+st.sidebar.markdown(
+    "pertts-streamlit @ [github](https://github.com/SadeghKrmi/pertts-streamlit.git)"
+)
+
+
 st.sidebar.header("Contact")
 st.sidebar.markdown(
     "support@datacula.com"
