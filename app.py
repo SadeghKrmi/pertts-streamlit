@@ -39,7 +39,7 @@ st.sidebar.markdown(
 
 st.title(":speech_balloon: Persian AI text-to-speech")
 """
-We're very excited to release `DataCula perTTS`, which coverts text to speech in persian/farsi.
+We're very excited to release `DataCula perTTS`, which coverts text to speech in persian/farsi using piper.
 """
 
 tab1, tab2 = st.tabs([
