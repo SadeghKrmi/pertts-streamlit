@@ -9,7 +9,7 @@ the live version of persian tts called [pertts](https://tts.datacula.com/)
 with love from datacula.com
 
 
-**Voice**: We are using an AI-based TTS system, trained with Amir Sooakhsh's voice from rokhpodcast[https://rokhpodcast.ir/], Special thanks to Amir :)
+**Voice**: We are using an AI-based TTS system, trained with Amir Sooakhsh's voice from [rokhpodcast](https://rokhpodcast.ir/), Special thanks to Amir :)
 
 ### 🛠️ Installation
 
