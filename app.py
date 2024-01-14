@@ -49,9 +49,10 @@ st.title(":speech_balloon: Persian AI text-to-speech")
 We're very excited to release `DataCula perTTS`, which coverts text to speech in persian/farsi using piper.
 """
 
-tab1, tab2 = st.tabs([
+tab1, tab2, tab3 = st.tabs([
     ":loudspeaker: Convert text",
     ":keyboard: Check a word",
+    ":information_source: Information",
 ])
 
 # Injecting the CSS
@@ -116,4 +117,12 @@ with tab2:
         if process.returncode == 0:
             stdout = stdout.decode('utf-8')
             st.write(word, '\u2194', stdout)
-       
+
+with tab3:
+    """
+    Please use the diacritics to generate moe sensible pronounciations. \n
+        shift+d --> کسره  \n
+        shift+s --> ضمه   \n
+        shift+a --> فتح   \n
+        shift+f --> تشدید \n
+    """
