@@ -10,6 +10,9 @@ with love from datacula.com
 
 
 **Voice**: We are using an AI-based TTS system, trained with Amir Sooakhsh's voice from [rokhpodcast](https://rokhpodcast.ir/), Special thanks to Amir :)
+### dataset
+https://huggingface.co/datasets/SadeghK/datacula-pertts-amir
+
 
 ### 🛠️ Installation
 
