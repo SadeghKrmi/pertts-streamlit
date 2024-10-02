@@ -69,15 +69,19 @@ with tab1:
     col1, col2 = st.columns(2)
     
     with col2:
-        model = st.selectbox(
+        modelname = st.selectbox(
             'Please select the model to generate audio.',
             (
-                'ganji/epoch=5719-step=2609600-ganji.onnx',
-                'amir/epoch=5261-step=2455712.onnx',
+                'ganji',
+                'amir',
             ),
             label_visibility = "collapsed",    
         )
-        
+        models = {
+            'ganji': 'ganji/epoch=5719-step=2609600-ganji.onnx',
+            'amir': 'amir/epoch=5261-step=2455712.onnx'
+        }
+        model = models.get(modelname)
     
     with col1:
         if st.button('generate'):
