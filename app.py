@@ -27,7 +27,7 @@ st.sidebar.markdown(
 
 st.sidebar.header("Voice")
 st.sidebar.markdown(
-    "We are using an AI based TTS system, trained with Amir Sooakhsh voice from [rokhpodcast](https://rokhpodcast.ir/), Special thanks to Amir :)"
+    "We are using an AI based TTS system ;)"
 )
 
 
@@ -40,6 +40,7 @@ st.sidebar.markdown(
 
 st.sidebar.header("Contact")
 st.sidebar.markdown(
+    "sadegh.krmi@gmail.com"
     "support@datacula.com"
 )
 
@@ -71,7 +72,8 @@ with tab1:
         model = st.selectbox(
             'Please select the model to generate audio.',
             (
-                'epoch=5261-step=2455712.onnx',
+                'ganji/epoch=5719-step=2609600-ganji.onnx',
+                'amir/epoch=5261-step=2455712.onnx',
             ),
             label_visibility = "collapsed",    
         )
