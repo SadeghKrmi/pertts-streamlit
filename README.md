@@ -18,6 +18,10 @@ with love from datacula.com
 https://huggingface.co/datasets/SadeghK/datacula-pertts-amir
 
 
+### models
+models are available in [HuggingFace](https://huggingface.co/SadeghK/persian-text-to-speech/tree/main/farsi).
+
+
 ### 🛠️ Installation
 
 #### docker
