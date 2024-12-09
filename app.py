@@ -88,7 +88,7 @@ with tab1:
             epoch = time()
             wav_filename = str(epoch).replace('.', '') + ".wav"
             wav_filepath = "./audio-out/" + wav_filename
-            gCommand = ['bash', '-c', 'echo "{txt}" | ./piper/piper --model ./model/{model} --output_file {wav_filepath} --sentence_silence 0.3'.format(txt=txt, model=model,wav_filepath=wav_filepath)]
+            gCommand = ['bash', '-c', 'echo "{txt}" | /root/piper/build/piper --data-dir /usr/share/espeak-ng-data --model ./model/{model} --output_file {wav_filepath} --sentence_silence 0.3'.format(txt=txt, model=model,wav_filepath=wav_filepath)]
 
             with st.spinner('Wait for it...'):
                 try:

@@ -12,14 +12,15 @@ with love from datacula.com
 **Voices**: We are using an AI-based TTS system, trained with 
 - amir: Amir Sooakhsh's voice from [rokhpodcast](https://rokhpodcast.ir/), Special thanks to Amir :)
 - ganji: Ahmad Ganji voice
+- gnaji-adabi: Ahmad Ganji voice, poetic version
 
 
 ### dataset
-https://huggingface.co/datasets/SadeghK/datacula-pertts-amir
+open-source-dataset[amir]: https://huggingface.co/datasets/SadeghK/datacula-pertts-amir
 
 
 ### models
-models are available in [HuggingFace](https://huggingface.co/SadeghK/persian-text-to-speech/tree/main/farsi).
+All models are available in [HuggingFace](https://huggingface.co/SadeghK/persian-text-to-speech/tree/main/farsi).
 
 
 ### 🛠️ Installation
@@ -58,5 +59,3 @@ open a PowerShell and `cd` to the directory where piper.exe exists, and run
 ```bash
 echo "سلام و درود بر شما" | .\piper.exe --model .\models\fa_IR-amir-medium.onnx --output_dir .\outputs
 ```
-
-

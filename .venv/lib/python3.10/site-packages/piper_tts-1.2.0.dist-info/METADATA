@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: piper-tts
+Version: 1.2.0
+Summary: A fast, local neural text to speech system that sounds great and is optimized for the Raspberry Pi 4.
+Home-page: http://github.com/rhasspy/piper
+Author: Michael Hansen
+Author-email: mike@rhasspy.org
+License: MIT
+Keywords: rhasspy piper tts
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Text Processing :: Linguistic
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Dist: piper-phonemize (~=1.1.0)
+Requires-Dist: onnxruntime (<2,>=1.11.0)
+
